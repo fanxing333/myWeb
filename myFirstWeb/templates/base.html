@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>石乐志的主页</title>
+    <link rel="icon" href="../static/myLogo.jpg">
+    <link rel="stylesheet" href="../static/styles.css" type="text/css">
+    {% endblock %}
+</head>
+<body>
+    {% for message in get_flashed_messages() %}
+        <div class="alert">{{message}}</div>
+    {% endfor %}
+    <p>Hello friends!</p>
+    <nav>
+        <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('flask')}}">Flask</a></li>
+            <li><a href="{{url_for('bigdata')}}">Big data</a></li>
+            <li><a href="{{url_for('cplex')}}">Cplex</a></li>
+            <li><a href="{{url_for('watchlist')}}">Watch list</a></li>
+            <li><a href="{{url_for('plan')}}">ToDo</a></li>
+            <li><a href="{{url_for('aboutme')}}">About</a></li>
+        </ul>
+    </nav>
+    {% block content %}{% endblock %}
+
+    <footer><small>&copy; 2020<a href="https://www.baidu.com">凡心所向，素履以往。</a> </small></footer>
+</body>
+</html>

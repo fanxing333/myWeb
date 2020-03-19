@@ -1,0 +1,75 @@
+body{
+    margin:auto;
+    min-width:800px;
+    font-size:14px;
+    font-family:Helvetica, Arial, sans-serif;
+}
+footer{
+    color:#888;
+    margin-top:15px;
+    text-align:center;
+    padding:10px
+}
+header{
+    background-image: url("images/mountain.jpg") ;
+    background-size: 100% 200%;
+    background-size: 800;
+    padding: 2em;
+}
+header div{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(163, 163, 151, 0.6);
+}
+header div h1{
+    font-size: 800;
+    color: rgb(255, 255, 255);
+    line-height: 50px;
+    display: inline;
+}
+#title{
+    padding-left: 10%;
+}
+#phone{
+    padding-left: 55%;
+    font-size: small;
+}
+header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+header li{
+    float: right;
+}
+header ul li a{
+    font-size: small;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+nav li {
+    float: left;
+    /*line-height:30px;*/
+}
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+nav li a:hover {
+    background-color: #111;
+
+
+}
+
+
