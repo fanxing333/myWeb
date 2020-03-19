@@ -1,8 +1,11 @@
 from flask import Flask, url_for, render_template, flash, request, redirect
 from datetime import timedelta
+import os
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = timedelta(seconds=1)
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY',	'dev')
+
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
