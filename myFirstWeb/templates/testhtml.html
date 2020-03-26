@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>石乐志的主页</title>
+    <link rel="icon" href="../static/myLogo.jpg">
+    <link rel="stylesheet" href="../static/styles.css" type="text/css">
+    <link rel="stylesheet" href="../static/todo.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            $(".day-item").hide(1000);
+          });
+        });
+        </script>
+</head>
+<body>
+    <header>
+        <p>Hello, friends!
+            {% if current_user.is_authenticated %}
+            <a href="logout">退出</a>
+            {% else %}
+            <a href="login">登录</a>
+            {% endif %}
+        </p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('flask')}}">Flask</a></li>
+            <li><a href="{{url_for('bigdata')}}">Big data</a></li>
+            <li><a href="{{url_for('cplex')}}">Cplex</a></li>
+            <li><a href="{{url_for('watchlist')}}">Watch list</a></li>
+            <li><a href="{{url_for('plan')}}">ToDo</a></li>
+            <li><a href="{{url_for('aboutme')}}">About</a></li>
+        </ul>
+    </nav>
+        
+    <div class="head">
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <!--<label class="sr-only" for="name">计划</label>-->
+                <input type="text" class="form-control" id="name" placeholder="Please input the plan" width=120px>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="Please input the notes">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox">importance
+                <input type="checkbox">urgency
+            </div>
+            <div class="radio">
+                <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1" checked> day
+                <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option2" checked> week
+                <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option3" checked> long-term
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    <div class="body">
+        <div class="left">
+            <div class="week">本周计划<span class="caret"></span>
+                <ul class="list-group">
+                    <li class="list-group-item">信管pdf阅读思考</li>
+                    <li class="list-group-item">生产运营3道大题</li>
+                    <li class="list-group-item">外国文学女性形象赏析</li>
+                    <li class="list-group-item">会计学ppt</li>
+                    <li class="list-group-item">复习office</li>
+                </ul>
+            </div>
+
+            <div class="longterm">长期计划
+                <ul class="list-group">
+                    <li class="list-group-item">素描项目</li>
+                    <li class="list-group-item">看书</li>
+                    <li class="list-group-item">锻炼</li>
+                    <li class="list-group-item">自然语言处理</li>
+                </ul>
+            </div>
+        </div>
+        <div class="center">
+            <div class="list-group">
+                <button type="button" class="list-group-item list-group-item-success">今日<span class="glyphicon glyphicon-chevron-down pull-right" aria-hidden="true"></span></button>
+                    <ul class="list-group">
+                        <li class="list-group-item">写作业
+                            <span class="pull-right"><button type="button" class="btn btn-success">完成</button><button type="button" class="btn btn-danger">放弃</button></span></li>
+                        <li class="list-group-item">看书</li>
+                        <li class="list-group-item">锻炼</li>
+                        <li class="list-group-item">完成一项很大很大的计划</li>
+                    </ul>
+                <button type="button" class="list-group-item list-group-item-success">今日</button>
+                    <ul class="list-group">
+                        <li class="list-group-item day-item">写作业</li>
+                        <li class="list-group-item day-item">看书</li>
+
+                    </ul>
+                <button type="button" class="list-group-item list-group-item-success">今日</button>
+                    <ul class="list-group">
+                        <li class="list-group-item day-item">写作业</li>
+                        <li class="list-group-item day-item">看书</li>
+
+                    </ul>
+                <button type="button" class="list-group-item list-group-item list-group-item-danger">今日</button>
+                    <ul class="list-group">
+                        <li class="list-group-item day-item">写作业</li>
+                        <li class="list-group-item day-item">看书</li>
+                        <li class="list-group-item day-item">锻炼</li>
+                    </ul>
+                <button type="button" class="list-group-item list-group-item list-group-item-danger">今日</button>
+                    <ul class="list-group">
+                        <li class="list-group-item day-item">写作业</li>
+                    </ul>
+                <button type="button" class="list-group-item list-group-item list-group-item-danger">今日</button>
+                    <ul class="list-group">
+                        <li class="list-group-item day-item">写作业</li>
+                        <li class="list-group-item day-item">看书</li>
+                        <li class="list-group-item day-item">锻炼</li>
+                        <li class="list-group-item day-item">完成一项很大很大的计划</li>
+                    </ul>
+                <button type="button" class="list-group-item list-group-item-danger">今日</button>
+                    <ul class="list-group">
+                    </ul>
+            </div>
+            
+        </div>
+        <!--<div class="right">四象限表</div>-->
+    </div>
+    <footer><small>&copy; 2020<a href="https://www.baidu.com">凡心所向，素履以往。</a> </small></footer>
+</body>
+</html>

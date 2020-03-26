@@ -1,0 +1,39 @@
+.head{
+    max-width: 820px;
+    margin: 0 auto;
+}
+.body{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.left{
+    width: 230px;
+    float: left;
+    
+}
+.center{
+    width: 540px;
+    float: left;
+    height: 600px;
+    
+}
+.center div{
+    background-color: rgb(208, 211, 210);
+    height: 30px;
+    border-radius: 15px;
+
+    
+    
+}
+.center div h3{
+    line-height: 30px;
+    margin-left: 10px;
+}
+.right{
+    width: auto;
+    
+}
+
+.left ul{
+    width: 200px;
+}

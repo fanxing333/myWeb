@@ -1,0 +1,51 @@
+header a{
+    color: black;
+    text-decoration: none;
+    float: right;
+    padding: 0.5%;
+}
+
+.body{
+    max-width:800px;
+    margin:0 auto;
+    padding:0px
+
+}
+
+.body ul{
+    list-style-type: none;
+    margin:0px;padding:0px
+}
+.text-body{
+    border-bottom-style: double;
+    border-color: rgba(199, 199, 199, 0.8);
+}
+.text-body .title p{
+    font-size: small;
+    text-align: right;
+}
+
+.title a{
+    font-size: large;
+    font-weight: lighter;
+    color: rgb(0, 174, 255);
+    line-height: 17.33px;
+    
+    text-decoration: none;
+    float: left;
+}
+.text p{
+
+    border-left-style: solid;
+    border-left-width: 6px;
+    border-color: rgb(112, 112, 112);
+    color: rgb(145, 142, 142);
+
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
